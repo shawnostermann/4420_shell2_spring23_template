@@ -30,7 +30,7 @@ PATH="/bin:/usr/bin"
 
 echo "==================== path test2 ===================="
 rm -f tmp.myecho
-cp /bin/echo tmp.myecho
+ln -s /bin/echo ./tmp.myecho
 tmp.myecho "this should fail and you should NOT see this message"
 ./tmp.myecho "this time tmp.myecho should work"
 
